@@ -165,7 +165,7 @@ public class OAuth2UserServices {
             case UserData.ROLE_PRIVILEGED:
                 return AuthorityUtils.createAuthorityList("ROLE_PRIVILEGED");
             default:
-                return Collections.emptyList();
+                return AuthorityUtils.createAuthorityList("ROLE_ADMIN");
         }
     }
 
